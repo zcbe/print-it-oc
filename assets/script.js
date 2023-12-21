@@ -38,6 +38,13 @@ function updateDots(index) {
 
 // Fonction pour mettre l'image et le texte
 function updateCarousel(index, direction) {
+	//correction du bug pour la première et la dernière image
+	if (currentIndex === -1 && direction === 'left') {
+		currentIndex = slides.length - 1; // length nombre de paramètres attendus  
+	} else if (currentIndex === slides.length && direction === 'right') {
+		currentIndex = 0;
+	}
+
   
   // Mettre à jour l'image
   bannerImg.src = `assets/images/slideshow/${slides[currentIndex].image}`;
