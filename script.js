@@ -59,10 +59,10 @@ function updateCarousel(_index, direction) {
 		currentIndex = 0;
 	}
 
-  
+
   // Mettre à jour l'image
   banner_Image .src = `assets/images/slideshow/${slides[currentIndex].image}`;
-  banner_Image .alt = `Slide ${currentIndex +1}`;
+  banner_Image .alt = `Slide ${currentIndex}`;
 
   // Mettre à jour le texte
   document.querySelector('p').innerHTML = slides[currentIndex].tagLine;
